@@ -85,12 +85,13 @@ class ClientHandler implements Runnable {
             String name = in.readLine();
             System.out.println(name + " connected!");
 //            out.println("Enter message:");
-            ChatServer.broadcastArrivalANDExit(name + " has joined the chat!",out);
+            ChatServer.broadcastArrivalANDExit(name + " has joined the chat!/\n type '/quit' to leave chat.",out);
             while (true) {
                 String message = in.readLine();
                 if (message.startsWith("/quit")) {
                     ChatServer.broadcastArrivalANDExit(name + " has left the chat!",out);
                     shutdown();
+
                 }
                 Message messageSent = new Message(name,message);
                 messageDAOimpl.saveMessage(messageSent);

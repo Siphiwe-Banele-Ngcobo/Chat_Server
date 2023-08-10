@@ -89,6 +89,7 @@ class ServerHandler implements Runnable {
                 if(in != null){
                     try {
                         in.close();
+
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
