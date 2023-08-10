@@ -1,4 +1,4 @@
-# Joke_Generator
+# Chat_Server
 A simple chat server that stores and records messages and the time they were sent into a database .
 To ensure the program flly functions:
 1. add a mysql connector from version 5.4 and up.
